@@ -1,7 +1,7 @@
 Entwi::Application.routes.draw do
   root :to => "home#index"
 
-  resources :tweets, :only => [:create]
+  resources :tweets, :only => [:create, :show]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

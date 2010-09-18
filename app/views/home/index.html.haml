@@ -6,4 +6,6 @@
 
 %ul
   - @tweets.each do |tweet|
-    %li= tweet.text
+    %li
+      = tweet.text
+      != link_to 'detail', tweet

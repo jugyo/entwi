@@ -7,4 +7,8 @@ class TweetsController < ApplicationController
     end
     redirect_to :root
   end
+
+  def show
+    @tweet = Tweet.find(params[:id])
+  end
 end
