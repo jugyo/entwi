@@ -1,2 +1,11 @@
 %p
   = @tweet.text
+
+!= form_for @tweet.comments.new, :url => tweet_comments_path(@tweet), :method => :post do |f|
+  %p
+    != f.text_area :text, :size => '80x3'
+  != f.submit
+
+%ul
+  - @tweet.comments.desc(:created_at).each do |comment|
+    %li= comment.text
