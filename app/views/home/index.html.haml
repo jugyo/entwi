@@ -1,11 +1,17 @@
 %h1 EnTwi
 
+%hr
+
 != form_for Tweet.new do |f|
-  != f.text_area :text
+  @#{current_user.name}
+  %p
+    != f.text_area :text, :size => '80x3'
   != f.submit
 
 %ul
   - @tweets.each do |tweet|
     %li
+      @#{tweet.user.name}
+      \:
       = tweet.text
       != link_to 'detail', tweet
