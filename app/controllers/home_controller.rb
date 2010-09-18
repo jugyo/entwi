@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.desc(:created_at)
   end
 end
