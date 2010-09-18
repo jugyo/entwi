@@ -3,4 +3,6 @@ class Tweet
   include Mongoid::Timestamps
 
   field :text
+
+  referenced_in :user
 end
