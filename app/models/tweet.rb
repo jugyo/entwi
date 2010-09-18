@@ -5,5 +5,5 @@ class Tweet
   field :text
 
   referenced_in :user
-  embeds_many :comments
+  references_many :comments
 end

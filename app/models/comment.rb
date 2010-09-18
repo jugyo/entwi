@@ -4,5 +4,5 @@ class Comment
 
   field :text, :type => String
 
-  embedded_in :tweet, :inverse_of => :comments
+  referenced_in :tweet, :inverse_of => :comments
 end
