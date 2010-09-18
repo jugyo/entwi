@@ -1,0 +1,9 @@
+%h1 EnTwi
+
+!= form_for Tweet.new do |f|
+  != f.text_area :text
+  != f.submit
+
+%ul
+  - @tweets.each do |tweet|
+    %li= tweet.text
