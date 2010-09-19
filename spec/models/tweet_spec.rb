@@ -3,12 +3,12 @@ require 'spec_helper'
 describe Tweet do
   describe 'associations' do
     before do
-      @tweet = Tweet.new
+      @tweet = Tweet.create
       @tweet.comments.create!(:text => 'foo')
       @tweet.comments.create!(:text => 'bar')
     end
     subject { @tweet }
-    it { should have(2).comments }
+    it { subject.comments.count.should == 2 }
   end
 
   describe 'validations' do
