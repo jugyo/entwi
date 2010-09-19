@@ -10,4 +10,12 @@ describe Tweet do
     subject { @tweet }
     it { should have(2).comments }
   end
+
+  describe 'validations' do
+    before do
+      @tweet = Tweet.new(:text => 'a' * 141)
+    end
+    subject { @tweet }
+    it { should_not be_valid }
+  end
 end

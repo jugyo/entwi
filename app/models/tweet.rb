@@ -6,4 +6,6 @@ class Tweet
 
   referenced_in :user
   references_many :comments
+
+  validates_length_of :text, :maximum => 140
 end
