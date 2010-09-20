@@ -1,8 +1,10 @@
 != form_for Tweet.new do |f|
-  @#{current_user.name}
-  %p
+  %div
+    != f.select :trans_type, Tweet::TRANS_TYPES.invert.to_a
+  %div
     != f.text_area :text, :size => '80x3'
-  != f.submit
+  %div
+    != f.submit
 
 %ul
   - @tweets.each do |tweet|
