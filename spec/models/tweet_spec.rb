@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Tweet do
   describe 'associations' do
     before do
-      @tweet = Tweet.create
+      @tweet = Tweet.create(:trans_type => 'en2ja', :text => 'I am a pen.')
       @tweet.comments.create!(:text => 'foo')
       @tweet.comments.create!(:text => 'bar')
     end
@@ -13,7 +13,7 @@ describe Tweet do
 
   describe 'validations' do
     before do
-      @tweet = Tweet.new(:text => 'a' * 141)
+      @tweet = Tweet.new(:trans_type => 'en2ja', :text => 'a' * 141)
     end
     subject { @tweet }
     it { should_not be_valid }
