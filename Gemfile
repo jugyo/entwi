@@ -23,6 +23,10 @@ gem 'unicorn'
 
 gem 'bson_ext', '1.0.4'
 gem 'mongoid', '2.0.0.beta.18'
+gem 'twitter-auth',
+    :require => 'twitter_auth/engine',
+    :git => 'git://github.com/nijitaro/twitter-auth.git',
+    :branch => 'rails_3_mongoid'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
