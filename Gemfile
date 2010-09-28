@@ -21,7 +21,7 @@ gem 'unicorn'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
-gem 'bson_ext'
+gem 'bson_ext', '1.0.4'
 gem 'mongoid', '2.0.0.beta.18'
 
 # Bundle gems for the local environment. Make sure to
