@@ -6,10 +6,12 @@
   %div
     != f.submit
 
-%ul
+%ul.tweets
   - @tweets.each do |tweet|
     %li
-      @#{tweet.user.name}
+      != image_tag tweet.user.profile_image_url
+      @#{tweet.user.login}
       \:
       = tweet.text
-      != link_to '訳す', tweet
+      .meta
+        != link_to '訳す', tweet

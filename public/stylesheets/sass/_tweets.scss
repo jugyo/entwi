@@ -1,0 +1,22 @@
+ul.tweets {
+  padding: 10px 0;
+
+  li:first-child {
+    border-top: solid 1px #DDD;
+  }
+
+  li {
+    padding: 10px 0;
+    border-bottom: solid 1px #DDD;
+
+    img {
+      vertical-align: top;
+    }
+
+    .meta {
+      color: #AAA;
+      font-size: 80%;
+      text-align: right;
+    }
+  }
+}

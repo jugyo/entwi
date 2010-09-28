@@ -7,18 +7,20 @@
     != csrf_meta_tag
 
   %body
-    .header
-      %h1!= link_to 'EnTwi', root_path
-      .user-menu
-        - if logged_in?
-          = current_user.login
-          |
-          != link_to 'ログアウト', logout_url
-        - else
-          != link_to 'Twitter アカウントでログイン', login_url
+    .wrap
+      .header
+        %h1!= link_to 'EnTwi', root_path
+        .user-menu
+          - if logged_in?
+            = current_user.login
+            |
+            != link_to 'ログアウト', logout_url
+          - else
+            != link_to 'Twitter アカウントでログイン', login_url
+        .clear
 
-    .main
-      != yield
+      .main
+        != yield
 
-    .side
-      side
+      .side
+        side
