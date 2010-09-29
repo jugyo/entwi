@@ -33,8 +33,17 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+h2 {
+  margin: 20px 0;
+  color: #AAA; }
+
 textarea {
   width: 99%; }
+
+p {
+  margin: 4px 0;
+  font-size: 86%;
+  color: #666; }
 
 .header {
   padding: 8px 0;
@@ -66,26 +75,49 @@ textarea {
 .clear {
   clear: both; }
 
-ul.tweets {
-  padding: 10px 0; }
-  ul.tweets li:first-child {
-    border-top: solid 1px #DDD; }
-  ul.tweets li {
-    padding: 10px 0;
-    border-bottom: solid 1px #DDD; }
-    ul.tweets li img {
-      vertical-align: top; }
-    ul.tweets li .meta {
-      color: #AAA;
-      font-size: 80%;
-      text-align: right; }
+.right {
+  text-align: right; }
 
-.tweet {
-  padding: 10px;
-  border: solid 1px #CCC;
-  margin-bottom: 10px; }
-  .tweet img {
+.tweet-form {
+  padding: 6px;
+  border: solid 6px #EEE; }
+  .tweet-form form {
+    margin: 8px 0; }
+
+ul.tweets li:first-child {
+  border-top: solid 1px #DDD; }
+ul.tweets li {
+  padding: 10px 0;
+  border-bottom: solid 1px #DDD; }
+  ul.tweets li img {
     vertical-align: top; }
+  ul.tweets li .meta {
+    color: #AAA;
+    font-size: 80%;
+    text-align: right; }
 
-.translate {
-  margin-bottom: 10px; }
+.tweet .content {
+  padding: 6px;
+  border: solid 6px #EEE;
+  margin: 10px 0; }
+.tweet img {
+  width: 24px;
+  height: 24xp;
+  vertical-align: bottom; }
+
+.comment-form {
+  margin-bottom: 10px;
+  padding: 6px;
+  border: dotted 2px #EEE; }
+
+ul.comments li:first-child {
+  border-top: solid 1px #DDD; }
+ul.comments li {
+  padding: 10px 0;
+  border-bottom: solid 1px #DDD; }
+  ul.comments li img {
+    vertical-align: top; }
+  ul.comments li .meta {
+    color: #AAA;
+    font-size: 80%;
+    text-align: right; }

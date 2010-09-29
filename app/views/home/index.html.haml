@@ -1,11 +1,17 @@
-- if logged_in?
-  != form_for Tweet.new do |f|
-    %div
-      != f.select :trans_type, Tweet::TRANS_TYPES.invert.to_a
-    %div
-      != f.text_area :text, :size => '80x3'
-    %div
-      != f.submit
+.tweet-form
+  - if logged_in?
+    %p 翻訳してもらいたい文章を投稿しよう！
+    != form_for Tweet.new do |f|
+      %div
+        != f.select :trans_type, Tweet::TRANS_TYPES.invert.to_a
+      %div
+        != f.text_area :text, :size => '80x3'
+      .right
+        != f.submit
+  - else
+    %p 投稿するには#{link_to 'ログイン', login_path(:return_to => request.fullpath)}してください
+
+%h2 新着
 
 %ul.tweets
   - @tweets.each do |tweet|

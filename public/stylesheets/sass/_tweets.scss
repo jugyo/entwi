@@ -1,6 +1,13 @@
-ul.tweets {
-  padding: 10px 0;
+.tweet-form {
+  padding: 6px;
+  border: solid 6px #EEE;
 
+  form {
+    margin: 8px 0;
+  }
+}
+
+ul.tweets {
   li:first-child {
     border-top: solid 1px #DDD;
   }
@@ -22,15 +29,42 @@ ul.tweets {
 }
 
 .tweet {
-  padding: 10px;
-  border: solid 1px #CCC;
-  margin-bottom: 10px;
+  .content {
+    padding: 6px;
+    border: solid 6px #EEE;
+    margin: 10px 0;
+  }
 
   img {
-    vertical-align: top;
+    width: 24px;
+    height: 24xp;
+    vertical-align: bottom;
   }
 }
 
-.translate {
+.comment-form {
   margin-bottom: 10px;
+  padding: 6px;
+  border: dotted 2px #EEE;
+}
+
+ul.comments {
+  li:first-child {
+    border-top: solid 1px #DDD;
+  }
+
+  li {
+    padding: 10px 0;
+    border-bottom: solid 1px #DDD;
+
+    img {
+      vertical-align: top;
+    }
+
+    .meta {
+      color: #AAA;
+      font-size: 80%;
+      text-align: right;
+    }
+  }
 }

@@ -1,17 +1,20 @@
 .tweet
-  != image_tag @tweet.user.profile_image_url
-  @#{@tweet.user.login}
-  \:
-  = @tweet.text
+  .user-info
+    != image_tag @tweet.user.profile_image_url
+    @#{@tweet.user.login}
+  .content
+    = @tweet.text
 
-.translate
+.comment-form
   - if logged_in?
+    %p 訳してみよう！
     != form_for @tweet.comments.new, :url => tweet_comments_path(@tweet), :method => :post do |f|
       %p
         != f.text_area :text, :size => '80x3'
-      != f.submit
+      .right
+        != f.submit
   - else
-    訳すには#{link_to 'ログイン', login_path(:return_to => request.fullpath)}してください
+    %p 訳すには#{link_to 'ログイン', login_path(:return_to => request.fullpath)}してください
 
 %ul.comments
   - @tweet.comments.desc(:created_at).each do |comment|

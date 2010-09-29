@@ -1,5 +1,16 @@
+h2 {
+  margin: 20px 0;
+  color: #AAA;
+}
+
 textarea {
   width: 99%;
+}
+
+p {
+  margin: 4px 0;
+  font-size: 86%;
+  color: #666;
 }
 
 .header {
@@ -38,4 +49,8 @@ textarea {
 
 .clear {
   clear: both;
+}
+
+.right {
+  text-align: right
 }
