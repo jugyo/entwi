@@ -14,9 +14,9 @@
           - if logged_in?
             = current_user.login
             |
-            != link_to 'ログアウト', logout_url
+            != link_to 'ログアウト', logout_url(:return_to => request.fullpath)
           - else
-            != link_to 'Twitter アカウントでログイン', login_url
+            != link_to 'Twitter アカウントでログイン', login_url(:return_to => request.fullpath)
         .clear
 
       .main
