@@ -37,7 +37,7 @@ textarea {
   width: 99%; }
 
 .header {
-  padding: 8px;
+  padding: 8px 0;
   border-bottom: dashed 1px #CCC; }
   .header h1 {
     font-size: 200%;
