@@ -1,10 +1,11 @@
-!= form_for Tweet.new do |f|
-  %div
-    != f.select :trans_type, Tweet::TRANS_TYPES.invert.to_a
-  %div
-    != f.text_area :text, :size => '80x3'
-  %div
-    != f.submit
+- if logged_in?
+  != form_for Tweet.new do |f|
+    %div
+      != f.select :trans_type, Tweet::TRANS_TYPES.invert.to_a
+    %div
+      != f.text_area :text, :size => '80x3'
+    %div
+      != f.submit
 
 %ul.tweets
   - @tweets.each do |tweet|
