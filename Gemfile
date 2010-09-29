@@ -35,4 +35,5 @@ group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'rspec-rails', '2.0.0.beta.22'
   gem 'haml-rails'
+  gem 'g'
 end
