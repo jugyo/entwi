@@ -5,20 +5,24 @@
       %div
         != f.select :trans_type, Tweet::TRANS_TYPES.invert.to_a
       %div
-        != f.text_area :text, :size => '80x3'
+        != f.text_area :text, :size => '80x2'
       .right
-        != f.submit
+        != f.submit '投稿'
   - else
     %p 投稿するには#{link_to 'ログイン', login_path(:return_to => request.fullpath)}してください
 
-%h2 新着
+.timeline
 
-%ul.tweets
-  - @tweets.each do |tweet|
-    %li
-      != image_tag tweet.user.profile_image_url
-      @#{tweet.user.login}
-      \:
-      = tweet.text
-      .meta
-        != link_to '訳す', tweet
+  %h2 新着
+
+  %ul.tweets
+    - @tweets.each do |tweet|
+      %li
+        != image_tag tweet.user.profile_image_url
+        @#{tweet.user.login}
+        \:
+        = tweet.text
+        .meta
+          != link_to "訳 (#{tweet.comments.count})", tweet
+          |
+          != link_to "訳す", tweet

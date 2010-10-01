@@ -38,7 +38,14 @@ h2 {
   color: #AAA; }
 
 textarea {
-  width: 99%; }
+  width: 99%;
+  border-style: solid;
+  border-width: 1;
+  border-color: #CCC;
+  border-radius: 4px; }
+
+textarea:hover, textarea:active {
+  border-color: #999; }
 
 p {
   margin: 4px 0;
@@ -47,15 +54,22 @@ p {
 
 .header {
   padding: 8px 0;
-  border-bottom: dashed 1px #CCC; }
+  margin-bottom: 20px; }
   .header h1 {
     font-size: 200%;
     float: left; }
 
 .user-menu {
-  font-size: 90%;
+  font-size: 86%;
   float: right;
   color: #AAA; }
+  .user-menu a {
+    color: #666; }
+  .user-menu img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin: 0 4px; }
 
 .wrap {
   width: 800px;
@@ -64,10 +78,10 @@ p {
 .main {
   width: 580px;
   padding: 10px 10px 0 0;
-  float: left;
-  border-right: 1px dashed #CCC; }
+  float: left; }
 
 .side {
+  color: #999;
   width: 180px;
   float: left;
   padding: 10px 0 0 10px; }
@@ -79,10 +93,14 @@ p {
   text-align: right; }
 
 .tweet-form {
-  padding: 6px;
-  border: solid 6px #EEE; }
+  padding: 10px;
+  background-color: #F1F1F1;
+  border-radius: 8px; }
   .tweet-form form {
-    margin: 8px 0; }
+    margin-top: 10px; }
+
+.timeline {
+  padding: 10px; }
 
 ul.tweets li:first-child {
   border-top: solid 1px #DDD; }
@@ -95,28 +113,39 @@ ul.tweets li {
     color: #AAA;
     font-size: 80%;
     text-align: right; }
+    ul.tweets li .meta a {
+      color: #666; }
 
 .tweet .content {
   padding: 6px;
-  border: solid 6px #EEE;
-  margin: 10px 0; }
+  margin: 10px 0;
+  background-color: #EEE;
+  border-radius: 4px; }
+.tweet .tweet-text {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #FFF;
+  border-radius: 3px; }
 .tweet img {
-  width: 24px;
-  height: 24xp;
   vertical-align: bottom; }
 
+.reactions {
+  font-size: 90%;
+  margin-left: 40px;
+  margin-right: 3px; }
+
 .comment-form {
-  margin-bottom: 10px;
-  padding: 6px;
-  border: dotted 2px #EEE; }
+  margin: 20px 0; }
 
 ul.comments li:first-child {
-  border-top: solid 1px #DDD; }
+  border-top: solid 1px #EEE; }
 ul.comments li {
   padding: 10px 0;
-  border-bottom: solid 1px #DDD; }
+  border-bottom: solid 1px #EEE; }
   ul.comments li img {
-    vertical-align: top; }
+    vertical-align: top;
+    width: 24px;
+    height: 24xp; }
   ul.comments li .meta {
     color: #AAA;
     font-size: 80%;

@@ -5,6 +5,14 @@ h2 {
 
 textarea {
   width: 99%;
+  border-style: solid;
+  border-width: 1;
+  border-color: #CCC;
+  border-radius: 4px;
+}
+
+textarea:hover, textarea:active {
+  border-color: #999;
 }
 
 p {
@@ -15,7 +23,7 @@ p {
 
 .header {
   padding: 8px 0;
-  border-bottom: dashed 1px #CCC;
+  margin-bottom: 20px;
 
   h1 {
     font-size: 200%;
@@ -24,9 +32,20 @@ p {
 }
 
 .user-menu {
-  font-size: 90%;
+  font-size: 86%;
   float: right;
   color: #AAA;
+
+  a {
+    color: #666;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin: 0 4px;
+  }
 }
 
 .wrap {
@@ -38,10 +57,10 @@ p {
   width: 580px;
   padding: 10px 10px 0 0;
   float: left;
-  border-right: 1px dashed #CCC;
 }
 
 .side {
+  color: #999;
   width: 180px;
   float: left;
   padding: 10px 0 0 10px;

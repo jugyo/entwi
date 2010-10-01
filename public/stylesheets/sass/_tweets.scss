@@ -1,10 +1,15 @@
 .tweet-form {
-  padding: 6px;
-  border: solid 6px #EEE;
+  padding: 10px;
+  background-color: #F1F1F1;
+  border-radius: 8px;
 
   form {
-    margin: 8px 0;
+    margin-top: 10px;
   }
+}
+
+.timeline {
+  padding: 10px;
 }
 
 ul.tweets {
@@ -24,6 +29,10 @@ ul.tweets {
       color: #AAA;
       font-size: 80%;
       text-align: right;
+
+      a {
+        color: #666;
+      }
     }
   }
 }
@@ -31,34 +40,46 @@ ul.tweets {
 .tweet {
   .content {
     padding: 6px;
-    border: solid 6px #EEE;
     margin: 10px 0;
+    background-color: #EEE;
+    border-radius: 4px;
+  }
+
+  .tweet-text {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #FFF;
+    border-radius: 3px;
   }
 
   img {
-    width: 24px;
-    height: 24xp;
     vertical-align: bottom;
   }
 }
 
+.reactions {
+  font-size: 90%;
+  margin-left: 40px;
+  margin-right: 3px;
+}
+
 .comment-form {
-  margin-bottom: 10px;
-  padding: 6px;
-  border: dotted 2px #EEE;
+  margin: 20px 0;
 }
 
 ul.comments {
   li:first-child {
-    border-top: solid 1px #DDD;
+    border-top: solid 1px #EEE;
   }
 
   li {
     padding: 10px 0;
-    border-bottom: solid 1px #DDD;
+    border-bottom: solid 1px #EEE;
 
     img {
       vertical-align: top;
+      width: 24px;
+      height: 24xp;
     }
 
     .meta {
