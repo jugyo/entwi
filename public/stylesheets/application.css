@@ -102,18 +102,20 @@ p {
 .timeline {
   padding: 10px; }
 
-ul.tweets li:first-child {
+ul.tweets li:first-child, .user-tweets li:first-child {
   border-top: solid 1px #DDD; }
-ul.tweets li {
+ul.tweets li, .user-tweets li {
   padding: 10px 0;
   border-bottom: solid 1px #DDD; }
-  ul.tweets li img {
-    vertical-align: top; }
-  ul.tweets li .meta {
+  ul.tweets li img, .user-tweets li img {
+    vertical-align: top;
+    width: 24px;
+    height: 24px; }
+  ul.tweets li .meta, .user-tweets li .meta {
     color: #AAA;
     font-size: 80%;
     text-align: right; }
-    ul.tweets li .meta a {
+    ul.tweets li .meta a, .user-tweets li .meta a {
       color: #666; }
 
 .tweet .content {
@@ -145,8 +147,23 @@ ul.comments li {
   ul.comments li img {
     vertical-align: top;
     width: 24px;
-    height: 24xp; }
+    height: 24px; }
   ul.comments li .meta {
     color: #AAA;
     font-size: 80%;
     text-align: right; }
+
+.profile {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #F1F1F1;
+  border-radius: 8px; }
+  .profile .user-name {
+    font-size: 200%;
+    color: #666; }
+  .profile img {
+    vertical-align: middle;
+    margin-right: 4px; }
+  .profile .user-data {
+    font-size: 86%;
+    margin-top: 16px; }

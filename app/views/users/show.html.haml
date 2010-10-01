@@ -1,0 +1,12 @@
+.profile
+  != image_tag @user.profile_image_url
+  %span.user-name= @user.login
+  .user-data
+    %p 投稿数: #{@user.tweets.count}
+    %p 翻訳数: #{@user.comments.count}
+
+.timeline
+  %ul.tweets
+    - @user.tweets.desc(:created_at).each do |tweet|
+      %li
+        != render 'shared/tweet', :tweet => tweet

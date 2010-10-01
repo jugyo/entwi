@@ -12,7 +12,7 @@
   padding: 10px;
 }
 
-ul.tweets {
+ul.tweets, .user-tweets {
   li:first-child {
     border-top: solid 1px #DDD;
   }
@@ -23,6 +23,8 @@ ul.tweets {
 
     img {
       vertical-align: top;
+      width: 24px;
+      height: 24px;
     }
 
     .meta {
@@ -79,7 +81,7 @@ ul.comments {
     img {
       vertical-align: top;
       width: 24px;
-      height: 24xp;
+      height: 24px;
     }
 
     .meta {
@@ -87,5 +89,27 @@ ul.comments {
       font-size: 80%;
       text-align: right;
     }
+  }
+}
+
+.profile {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #F1F1F1;
+  border-radius: 8px;
+
+  .user-name {
+    font-size: 200%;
+    color: #666;
+  }
+
+  img {
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+
+  .user-data {
+    font-size: 86%;
+    margin-top: 16px;
   }
 }

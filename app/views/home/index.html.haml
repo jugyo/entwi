@@ -17,13 +17,4 @@
   %ul.tweets
     - @tweets.each do |tweet|
       %li
-        != image_tag tweet.user.profile_image_url
-        @#{tweet.user.login}
-        \:
-        = tweet.text
-        .meta
-          = tweet.trans_type_label
-          |
-          != link_to "訳す！", tweet
-          |
-          != link_to "#{tweet.comments.count}", tweet
+        != render 'shared/tweet', :tweet => tweet
