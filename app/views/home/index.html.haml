@@ -3,10 +3,9 @@
     %p 翻訳してもらいたい文章を投稿しよう！
     != form_for Tweet.new do |f|
       %div
-        != f.select :trans_type, Tweet::TRANS_TYPES.invert.to_a
-      %div
         != f.text_area :text, :size => '80x2'
       .right
+        != f.select :trans_type, Tweet::TRANS_TYPES.invert.to_a
         != f.submit '投稿'
   - else
     %p 投稿するには#{link_to 'ログイン', login_path(:return_to => request.fullpath)}してください
@@ -23,6 +22,8 @@
         \:
         = tweet.text
         .meta
-          != link_to "訳 (#{tweet.comments.count})", tweet
+          = tweet.trans_type_label
           |
-          != link_to "訳す", tweet
+          != link_to "訳す！", tweet
+          |
+          != link_to "#{tweet.comments.count}", tweet

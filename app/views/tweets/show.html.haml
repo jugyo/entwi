@@ -3,7 +3,7 @@
     != image_tag @tweet.user.profile_image_url
     @#{@tweet.user.login}
   .content
-    %p これ訳して！
+    %p= @tweet.trans_type_label
     .tweet-text
       = @tweet.text
 

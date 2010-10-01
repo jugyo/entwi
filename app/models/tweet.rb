@@ -1,7 +1,7 @@
 # coding: utf-8
 class Tweet
   # TODO: i18n
-  TRANS_TYPES = {'en2ja' => '英→日', 'ja2en' => '日→英'}
+  TRANS_TYPES = {'en2ja' => 'これを日本語に訳して！', 'ja2en' => 'これを英語に訳して！'}
 
   include Mongoid::Document
   include Mongoid::Timestamps
@@ -14,4 +14,8 @@ class Tweet
 
   validates :text, :presence => true, :length => {:maximum => 140}
   validates :trans_type, :presence => true
+
+  def trans_type_label
+    TRANS_TYPES[trans_type]
+  end
 end
