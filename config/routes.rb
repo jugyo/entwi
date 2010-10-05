@@ -3,6 +3,10 @@ Entwi::Application.routes.draw do
 
   resources :tweets, :path => '/t', :only => [:create, :show] do
     resources :comments, :only => [:create]
+    member do
+      post 'watch'
+      delete 'watch' => 'tweets#unwatch'
+    end
   end
 
   # redefine routes for oauth before '/:login'

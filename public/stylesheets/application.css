@@ -123,6 +123,8 @@ ul.tweets li, .user-tweets li {
   margin: 10px 0;
   background-color: #EEE;
   border-radius: 4px; }
+.tweet .meta {
+  float: right; }
 .tweet .tweet-text {
   padding: 10px;
   margin-top: 10px;

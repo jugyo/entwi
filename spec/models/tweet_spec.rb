@@ -18,4 +18,14 @@ describe Tweet do
     subject { @tweet }
     it { should_not be_valid }
   end
+
+  describe 'watchers' do
+    before do
+      @tweet = Tweet.create(:trans_type => 'en2ja', :text => 'I am a pen.')
+      @tweet.watchers << Factory.create(:user).id
+      @tweet.watchers << Factory.create(:user).id
+    end
+    subject { @tweet }
+    it { @tweet.watchers.size.should == 2 }
+  end
 end

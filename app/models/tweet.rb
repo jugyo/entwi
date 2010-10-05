@@ -8,6 +8,7 @@ class Tweet
 
   field :text
   field :trans_type
+  field :watchers, :type => Array, :default => []
 
   referenced_in :user
   references_many :comments

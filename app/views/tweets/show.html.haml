@@ -1,4 +1,9 @@
 .tweet
+  .meta
+    - unless @tweet.watchers.include?(current_user.id)
+      != link_to 'Watch', watch_tweet_path(@tweet), :method => :post
+    - else
+      != link_to 'Unwatch', watch_tweet_path(@tweet), :method => :delete
   .user-info
     != image_tag @tweet.user.profile_image_url
     @#{@tweet.user.login}
