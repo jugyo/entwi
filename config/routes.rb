@@ -5,6 +5,11 @@ Entwi::Application.routes.draw do
     resources :comments, :only => [:create]
   end
 
+  # redefine routes for oauth before '/:login'
+  match '/login', :to => 'sessions#new', :as => :login
+  match '/logout', :to => 'sessions#destroy', :as => :logout
+  match '/oauth_callback', :to => 'sessions#oauth_callback', :as => 'oauth_callback'
+
   match '/:login' => 'users#show', :as => :user
 
   # The priority is based upon order of creation:
