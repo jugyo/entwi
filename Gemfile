@@ -36,4 +36,5 @@ group :development, :test do
   gem 'rspec-rails', '2.0.0.beta.22'
   gem 'haml-rails'
   gem 'g'
+  gem 'factory_girl'
 end
