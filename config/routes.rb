@@ -6,6 +6,7 @@ Entwi::Application.routes.draw do
     member do
       post 'watch'
       delete 'watch' => 'tweets#unwatch'
+      get 'watchers'
     end
   end
 

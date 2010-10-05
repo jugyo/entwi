@@ -1,6 +1,6 @@
 # coding: utf-8
 class TweetsController < ApplicationController
-  before_filter :find_tweet, :only => [:show, :watch, :unwatch]
+  before_filter :find_tweet, :only => [:show, :watch, :unwatch, :watchers]
 
   def create
     @tweet = Tweet.new(params[:tweet])
@@ -24,6 +24,10 @@ class TweetsController < ApplicationController
     @tweet.watchers.delete current_user.id
     @tweet.save!
     redirect_to @tweet
+  end
+
+  def watchers
+    @watchers = @tweet.watchers
   end
 
   private

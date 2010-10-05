@@ -1,0 +1,16 @@
+.tweet
+  .meta
+    != link_to l(@tweet.created_at), @tweet
+    |
+    - unless tweet.watchers.include?(current_user.id)
+      != link_to 'ウォッチ', watch_tweet_path(tweet), :method => :post
+    - else
+      != link_to 'ウォッチやめる', watch_tweet_path(tweet), :method => :delete
+    != link_to tweet.watchers.size, watchers_tweet_path(tweet)
+  .user-info
+    != image_tag tweet.user.profile_image_url
+    @#{tweet.user.login}
+  .content
+    %p= tweet.trans_type_label
+    .tweet-text
+      = tweet.text

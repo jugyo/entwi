@@ -1,0 +1,9 @@
+!= render 'tweet', :tweet => @tweet
+
+.reactions
+
+  %ul.watchers
+    - @watchers.map {|i| User.find(i) }.each do |user|
+      %li
+        != image_tag user.profile_image_url
+        @#{user.login}

@@ -12,7 +12,7 @@
   padding: 10px;
 }
 
-ul.tweets, .user-tweets {
+ul.tweets, .user-tweets, ul.watchers {
   li:first-child {
     border-top: solid 1px #DDD;
   }
@@ -48,7 +48,13 @@ ul.tweets, .user-tweets {
   }
 
   .meta {
+    margin: 0 4px;
+    font-size: 86%;
     float: right;
+    color: #AAA;
+    a {
+      color: #666;
+    }
   }
 
   .tweet-text {
