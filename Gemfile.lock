@@ -136,6 +136,7 @@ DEPENDENCIES
   haml-rails
   mongoid (= 2.0.0.beta.18)
   rails (= 3.0.0)
+  rspec (= 2.0.0)
   rspec-rails (= 2.0.0)
   ruby-debug19
   spork
