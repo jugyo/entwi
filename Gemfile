@@ -33,8 +33,10 @@ gem 'twitter-auth',
 # and rake tasks are available in development mode:
 group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
-  gem 'rspec-rails', '2.0.0.beta.22'
+  gem 'rspec-rails', '2.0.0'
   gem 'haml-rails'
   gem 'g'
   gem 'factory_girl'
+  gem 'spork'
+  gem 'autotest'
 end
